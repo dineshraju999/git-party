@@ -1,0 +1,135 @@
+Setting up username and email globally
+==========================================
+git config --global user.name "sai krishna"
+git config --global user.email "intelliqittrainings@gmail.com"
+
+To see the list of global configurations
+git config --global --list
+
+Git when working on the local machine uses 3 sections
+1 Working directory or Workspace
+2 Stagging Area
+3 Local Repository
+
+Working dir is the folder where the code is created and initially the files present here are called untracked files
+
+Stagging Area is an intermediate buffer zone of git where the file move into before going into the local repository and the files present here are called indexed files
+
+Local Repository is the location into which files move from stagging area and these files are called commited files
+
+1 To initilise the working dir as a git repository
+  git init
+  This command will create a hidden folder called .git where it
+  will store all the configurations related to git
+
+2 To send a file from working dir to stagging area
+  git add filename
+  To send multiple files from working dir to stagging area
+  git add file1 file2 file3
+  To send all the files from working dir to stagging area
+  git add .
+  Note  . represents "present working directory"
+
+3 To remove files from stagging area and bring them to working dir
+  git rm --cached filename
+  (or)
+  git reset filename
+
+4 To send files from stagging area to local repository
+  git commit -m "Some message"
+
+5 To see the status of the working directory and stagging area
+  git status
+
+6 To see the list of commits done in the local repository
+  git log
+  To see the above output in condensed format
+  git log --oneline
+
+======================================================
+.gitignore
+------------
+This is a special configuration file which is used for preserving 
+private files info.Any file whose name is mentioned in the .gitignore cannot be accessed by git
+
+1 Create few files
+  touch file1 file2 file3 file4
+
+2 Check the status of git
+  git status
+  It will show the above 4 files as untracked files
+
+3 Create .gitignore and store file1 and file2 names in it
+  cat > .gitignore
+  file1
+  file2
+  To come out of cat command ctrl+d
+
+4 Check the status of git
+  git status
+  It will not show file1 and file2 as untracked files
+  Further commands of git will not access those files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

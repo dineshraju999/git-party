@@ -1,0 +1,93 @@
+Git Stash
+============
+This is a feature of git where we can hide files from git so that these files are not commited
+This is generally used when there is some unfinished development work and the developers want to work on a new functionality leaving the unfinished work for the time being only to continue it later.In this cas we can push all these unfinsished files into the stash section.Any file that is pushed into the stash sectoion cannot be accessed by git until it is unstashed
+
+1 To see the list of stashes
+  git stash list
+
+2 To stash all the files present in the stagging area
+   git stash 
+
+3 To stash all the files present in the stagging area and untracked
+  section
+  git stash -u
+
+4 To stash all the files present in the stagging area,untracked section and the .gitignore file
+  git stash -a
+
+5 To unstash the latest stash
+  git stash pop
+
+6 To unstash an older stash
+  git stash pop@{stashno}
+
+Note: .gitignore is used for hiding the private files info
+but the .gitignore file itself is accessable by git.To make this .gitignore file unaccessable by git we can stash the .gitignore also
+using
+git stash -a
+
+Git Tag
+===============
+This is used for placing bookmarks on important commits
+Generally it is used for identifying commits related to releases
+
+Tags are classified into 2 types
+1 Lightweight tags
+2 Annoted Tags
+
+1 To create a light weight tag
+  git tag tagname
+
+2 To create an annoted tag
+  git tag -a 'tagname' -m 'some message'
+
+3 To see the list of all the tags
+  git tag
+
+Note: Tags are generally created only for the latest commit.If we want to create tags for an older commit
+4 To create lightweight tag for older commit
+  git tag tagname older_commitid
+
+5 To create annoted tag for an older commit
+  git tag -a 'tagname' -m 'some message' older_commitid
+
+6 To delete a tag
+  git tag -d tagname
+
+7 To push all the tags into the remote github
+  git push --tags
+
+8 To delete tags from the remote github
+  git push origin :tagname
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

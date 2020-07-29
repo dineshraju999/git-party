@@ -1,0 +1,156 @@
+git rebase interactive
+=========================
+This can be used for rearranging the commit history
+or for merging multiple commits(squash)
+
+
+1 Create few commits on master
+  a-->b-->c-->d-->e-->f
+
+Note: a commit is know as Initial commit and it cannot be rearranged
+
+2 To rearrange the commit history
+  git rebase -i HEAD~5
+  This will open the commit history in a text editior(vi)
+  Here we can rearrange the order of the commits
+  Save and quit  Esc :wq Enter
+
+3 Check the commit history
+
+Git Squash
+===============
+Merging of multiple commits is to reduce the commit history
+is known as squashing
+
+1 git rebase -i HEAD~5
+
+2 For all the commits that we want to merge remove the word
+  "pick" and replace it with "squash"
+  Save and quit  Esc : wq Enter
+
+3 Check the commit history
+  git log --oneline
+
+
+======================================================
+
+git amend
+==============
+This is used for modifying exisiting commits.
+Whenever changer are done we generally create a new commit.
+But it might not be necessary to create a commit for every minor change that is done to the code.In this case we can push the modifcations into the existing commit itself using "amend"
+
+1 Create few commits
+  touch f1
+  git add .
+  git commit -m "a"
+  touch f2
+  git add .
+  git commit -m "b"
+
+2 Check the commit history
+  git log--oneline
+
+3 Create a new file but push into the "b" commit 
+  touch f3
+  git add .
+  git commit --amend -m "b"
+
+4 Check the commit history
+  git log --oneline
+  We will see only 2 commits a and b
+
+Note: git amend removes the older b commit from the active git tree structure and makes it an orphaned commit
+To see the list of all the commits (active and orphaned)
+git reflog
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+Git Reset
+==============
+Reverting from one commit to any other commit is called reset
+This will enable us to toggle between commits,Send files from local reposiotry back to stagging area or working directory
+
+This can be done in 3 ways
+1 hard reset
+2 soft reset 
+3 mixed reset
+
+Hard reset
+-------------
+Here we can make the HEAD point to an older commit and once this is done we will be able to see the data as it was present at the time of the older commit
+
+1 Create a file called file1
+  cat > file1
+  one
+  To come out of cat ctrl+d
+
+2 Send this file into stagging and local repository
+  git add .
+  git commit -m "a"
+
+3 Add some more content into that file
+  cat >> file1
+  two
+  ctrl+d
+
+4 Send this file into stagging and local repository
+  git add .
+  git commit -m "b"
+
+5 Add some more content into the file
+  cat >> file1
+  three
+  ctrl+d
+
+6 Send this file into stagging and local repository
+  git add .
+  git commit -m "c"
+
+7 Check the commit history
+  git log --oneline
+
+8 To reset back to anly older commit
+   git reset --hard b_commtid
+   Now if we open the file we will see the data as it was present
+  at the time of b commit
+  cat file1
+
+
+Soft reset
+============
+This will move the HEAD to an older commit but the files be show as they are present in the stagging area ie the the status of git will be reverted one step back just before the commit took place
+
+git reset --soft b_commit_id
+
+Now we will see that HEAD points to b commit
+git log --oneline
+
+But the file1 will be shown in the stagging area
+git status
+
+Mixed Reset
+=================
+This will also move the HEAD to an older commit but the files be moved 2 steps back ie the files will be show in the untracked/modified section.
+
+git reset --mixed b_commit_id
+
+Now also we will see the HEAD points to b commit
+git log --oneline
+
+But the file1 status will be shown in untracked/modified section
+git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
