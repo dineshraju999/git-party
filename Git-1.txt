@@ -1,0 +1,115 @@
+VersionControlling
+=======================
+This is the process of maintianing multiple versions of the code
+All the team members upload their code into the version controlling system.The VCS accepts the code uploades from multiple team members and it creates on integrated project.Next time when the team mebers download the code they will be able to access all the code created by the entire team.
+The process of uploading into vcs's is called checkin and downloading is called checkout
+
+VCS's also preserve older and later versions of the code so that the team members can toggle between any version based on requirement
+
+VCS's also keep a track of who is making what kind of changes
+
+VCS's are of 2 type
+1 Centralised Version Controlling
+2 Distributed Version Controlling
+
+Centralised Version Controlling
+===================================
+Here we have a remote sevrver into which the code is pushed and version controlling happens only on that remote server.Eg: SVN
+
+Distributed Version Controlling
+===================================
+Here we have a local repository running on every team members machine and version controlling happens initally at the level of 
+individual team members.Later this code is pushed into the remote reposiotry where version controlling happens at the level of the entire team
+
+DVC can also be used to implement what are know as "bare repositories" whcih are useful for sub teams which are part of a bigger team
+
+Installing git on Windows
+============================
+1 Open https://git-scm.com/download
+2 Downlaod git for windows
+3 Install it
+4 Once git is installed we get an application called gitbash
+  This is the command prompt of git where we can fire git commands
+
+Installing git on Ubuntu Linux
+==================================
+1 Update the apt repository
+  sudo apt-get update
+2 Install git
+  sudo apt-get install -y git
+
+Installing git on RHEL,Centos etc
+=======================================
+1 Update the yum repository
+  yum -y update
+2 Install git
+  yum install -y git
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
